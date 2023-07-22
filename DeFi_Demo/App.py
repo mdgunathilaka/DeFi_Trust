@@ -135,7 +135,11 @@ def predict(token_add, Explanation):
     # some token have name and symbol as bytes32. By changing the ABI those tokens also can be collected
     print(f"Exception occured: {err}")
     print(f"abnormal address: {token_add}")
-    return "abnormal token"
+    im_grad_all = np.zeros((1429, 4839))
+    im_grad_val = np.zeros((1349, 5056))
+    im_sent_val = np.zeros((1349, 5056))
+    im_sent_grad = np.zeros((1349, 5056))
+    return "Invalid input/Token name is abnormal", im_grad_all, im_grad_val, im_sent_val, im_sent_grad
 
   feature_data = get_features(token_add, tx_df)
 

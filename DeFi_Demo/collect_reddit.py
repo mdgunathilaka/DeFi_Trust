@@ -4,10 +4,10 @@ import pandas as pd
 
 class Reddit_API:
     def __init__(self):
-        self.user_agent = "AGENT"
+        self.user_agent = "YOUR_AGENT"
         self.reddit = praw.Reddit(
-            client_id="YOUR ID",
-            client_secret="YOUR SECRET",
+            client_id="YOUR_ID",
+            client_secret="YOUR_SECRET",
             user_agent=self.user_agent
         )
         #subreddits to collect data from

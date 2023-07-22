@@ -10,7 +10,7 @@ from requests import get
 
 class ETH_API:
     def __init__(self):
-        self.INFURA_URL = "YOUR INFURA API"
+        self.INFURA_URL = "YOUR_INFURA_API"
         self.ABI = open("normal_token_abi.txt").read()
         self.web3 = Web3(HTTPProvider(self.INFURA_URL))
         self.hash_log = self.obtain_hash_event('Transfer(address,address,uint256)')
@@ -119,7 +119,7 @@ class ETH_API:
         return '0x' + k.hexdigest()
 
     def collect_gas_time(self, token_address, start_block):
-        API_KEY = os.environ["ETHERSCAN_TOKEN"] #YOUR ETHERSCAN API KEY
+        API_KEY = os.environ["YOUR_ETHERSCAN_TOKEN"] #YOUR ETHERSCAN API KEY
         last_block = self.web3.eth.block_number
         txhashes = []
         timestamps = []
